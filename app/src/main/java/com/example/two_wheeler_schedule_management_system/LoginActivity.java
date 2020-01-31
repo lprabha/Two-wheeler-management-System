@@ -14,7 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity {
 
     Button loginbtn;
     EditText uname,upassword;
@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        getSupportActionBar().hide();
 
         uname = findViewById( R.id.twUsername );
         upassword = findViewById( R.id.twPassword );
@@ -31,29 +32,27 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         uname = findViewById( R.id.twUsername );
         loginbtn = findViewById( R.id.tw_btnLogin );
 
-        loginbtn.setOnClickListener(this);
-        twsignup.setOnClickListener(this);
-        twforgot.setOnClickListener(this);
 
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        switch (v.getId()){
-            case R.id.tvSignUp:
-                openSignUp();
-                break;
-            case R.id.tvHelpSignIn:
-                Toast.makeText(this, "Go to Change Password", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.tw_btnLogin:
+        twsignup.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openSignup = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(openSignup);
+            }
+        } );
+        loginbtn.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 login();
-                break;
-        }
+            }
+        } );
+
+
     }
+
 
     public void login(){
+
         UserModel userLogin = new UserModel(uname.getText().toString(), upassword.getText().toString());
 
         LoginApi loginApi = Url.getInstance().create(LoginApi.class );
@@ -77,12 +76,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void openDashBoard(){
-        Intent openDash = new Intent(this, MainActivity.class);
+        Intent openDash = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(openDash);
     }
 
-    public void openSignUp(){
-        Intent openSignup = new Intent(this, RegisterActivity.class);
-        startActivity(openSignup);
-    }
+
 }

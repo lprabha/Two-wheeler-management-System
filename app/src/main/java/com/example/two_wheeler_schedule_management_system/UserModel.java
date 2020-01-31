@@ -11,7 +11,7 @@ public class UserModel {
         this.uemail = uemail;
         this.profilePicture = profilePicture;
     }
-    public UserModel( String uname, String upassword) {
+    public UserModel(String uphone, String uname) {
         this.uname = uname;
         this.upassword = upassword;
     }
