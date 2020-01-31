@@ -1,28 +1,33 @@
 package com.example.two_wheeler_schedule_management_system;
 
 public class UserModel {
-    private  String uId, uname, upassword, uemail;
-    private int profilePicture;
 
 
+    private  String uId;
+    private String uname;
+    private String upassword;
+    private String uphone;
+    private String uemail;
+    private String profilePic;
 
-    public UserModel(String uname, String uemail, int profilePicture) {
+    public UserModel(String uname, String upassword, String uphone, String uemail, String profilePicture) {
         this.uname = uname;
+        this.upassword = upassword;
+        this.uphone = uphone;
         this.uemail = uemail;
-        this.profilePicture = profilePicture;
+        this.profilePic = profilePic;
     }
-    public UserModel(String uphone, String uname) {
+
+    public UserModel(String uname, String upassword, String uphone, String uemail) {
+        this.uname = uname;
+        this.upassword = upassword;
+        this.uphone = uphone;
+        this.uemail = uemail;
+    }
+    public UserModel(String uname, String upassword) {
         this.uname = uname;
         this.upassword = upassword;
     }
-    public String getuId() {
-        return uId;
-    }
-
-    public void setuId(String uId) {
-        this.uId = uId;
-    }
-
     public String getUname() {
         return uname;
     }
@@ -39,6 +44,14 @@ public class UserModel {
         this.upassword = upassword;
     }
 
+    public String getUphone() {
+        return uphone;
+    }
+
+    public void setUphone(String uphone) {
+        this.uphone = uphone;
+    }
+
     public String getUemail() {
         return uemail;
     }
@@ -47,11 +60,14 @@ public class UserModel {
         this.uemail = uemail;
     }
 
-    public int getProfilePicture() {
-        return profilePicture;
+    public String getProfilePic() {
+        return profilePic;
     }
 
-    public void setProfilePicture(int profilePicture) {
-        this.profilePicture = profilePicture;
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
+
+
+
 }
