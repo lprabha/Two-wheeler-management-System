@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="Dashboard">
+
+    </item>
+
+    <item android:id="@+id/navigation_servicing"
+        android:icon="@drawable/service"
+        android:title="Maintance">
+
+    </item>
+
+
+    <item android:id="@+id/navigation_booking"
+        android:icon="@drawable/booking"
+        android:title="Favorites">
+    </item>
+
+    <item android:id="@+id/navigation_setting"
+        android:icon="@drawable/cogs"
+        android:title="Profile">
+
+    </item>
+
+</menu>

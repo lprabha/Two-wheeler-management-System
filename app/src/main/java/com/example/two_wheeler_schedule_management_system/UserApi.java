@@ -1,5 +1,7 @@
 package com.example.two_wheeler_schedule_management_system;
 
+import com.example.two_wheeler_schedule_management_system.Models.UserModel;
+
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;

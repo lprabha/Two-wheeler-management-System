@@ -52,7 +52,7 @@
             android:textSize="16sp"
             android:singleLine="true"
             android:hint="Email"
-            android:inputType="text" />
+            android:inputType="textEmailAddress" />
         <EditText
             android:id="@+id/signup_phone"
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
             android:textSize="16sp"
             android:singleLine="true"
             android:hint="Number"
-            android:inputType="text" />
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/signup_password"
