@@ -8,9 +8,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.two_wheeler_schedule_management_system.fragments.DashboardFragment"
+        android:name="com.example.two_wheeler_schedule_management_system.fragments.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/activity_fragment_dashboard" />
+        tools:layout="@layout/activity_fragment_home" />
 
     <fragment
         android:id="@+id/navigation_servicing"
@@ -27,5 +27,6 @@
         android:id="@+id/navigation_setting"
         android:name="com.example.two_wheeler_schedule_management_system.fragments."
         android:label="@string/title_setting"
-        tools:layout="@layout/activity_fragment_setting" />
+        tools:layout="@layout/activity_fragment_setting"
+        />
 </navigation>

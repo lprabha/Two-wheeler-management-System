@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.URL;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
