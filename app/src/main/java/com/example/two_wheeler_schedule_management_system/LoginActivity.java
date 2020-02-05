@@ -20,18 +20,18 @@ import retrofit2.Response;
 public class LoginActivity extends AppCompatActivity {
 
     Button loginbtn;
-    EditText uname,upassword;
+    EditText uname, upassword;
     TextView twsignup, twforgot;
 
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_login );
         getSupportActionBar().hide();
 
         uname = findViewById( R.id.twUsername );
         upassword = findViewById( R.id.twPassword );
         twsignup = findViewById( R.id.tvSignUp );
-        twforgot = findViewById(R.id.tvHelpSignIn);
+        twforgot = findViewById( R.id.tvHelpSignIn );
         uname = findViewById( R.id.twUsername );
         loginbtn = findViewById( R.id.tw_btnLogin );
 
@@ -39,8 +39,8 @@ public class LoginActivity extends AppCompatActivity {
         twsignup.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openSignup = new Intent(LoginActivity.this, SignUpActivity.class);
-                startActivity(openSignup);
+                Intent openSignup = new Intent( LoginActivity.this, SignUpActivity.class );
+                startActivity( openSignup );
             }
         } );
         loginbtn.setOnClickListener( new View.OnClickListener() {
@@ -54,34 +54,35 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void login(){
+    public void login() {
 
-        UserModel userLogin = new UserModel(uname.getText().toString(), upassword.getText().toString());
+        UserModel userLogin = new UserModel( uname.getText().toString(), upassword.getText().toString() );
 
-        LoginApi loginApi = Url.getInstance().create(LoginApi.class );
-        Call<Void> loginCall =loginApi.login(userLogin);
+        UserApi loginApi = Url.getInstance().create( UserApi.class );
+        Call<UserResponse> loginCall = loginApi.login( userLogin );
 
-        loginCall.enqueue(new Callback<Void>() {
+        loginCall.enqueue( new Callback<UserResponse>() {
             @Override
-            public void onResponse(Call<Void> call, Response<Void> response) {
-                if(!response.isSuccessful()){
-                    Toast.makeText(LoginActivity.this, "Login Error", Toast.LENGTH_SHORT).show();
-                    return;
+            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText( LoginActivity.this, "Error", Toast.LENGTH_SHORT ).show();
                 }
+                Toast.makeText( LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( LoginActivity.this, "token" + response.body().getToken(), Toast.LENGTH_SHORT ).show();
+                Url.token += response.body().getToken();
                 openDashBoard();
             }
 
             @Override
-            public void onFailure(Call<Void> call, Throwable t) {
-                Toast.makeText(LoginActivity.this, "Error " + t.getLocalizedMessage() , Toast.LENGTH_SHORT).show();
+            public void onFailure(Call<UserResponse> call, Throwable t) {
+                Toast.makeText( LoginActivity.this, "Error:", Toast.LENGTH_SHORT ).show();
             }
-        });
+        } );
     }
 
-    public void openDashBoard(){
-        Intent openDash = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(openDash);
+    public void openDashBoard() {
+        Intent openDash = new Intent( LoginActivity.this, ActivityDashboard.class );
+        startActivity( openDash );
+
     }
-
-
 }

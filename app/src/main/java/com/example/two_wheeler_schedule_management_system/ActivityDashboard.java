@@ -7,10 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.two_wheeler_schedule_management_system.fragments.BookingFragment;
 import com.example.two_wheeler_schedule_management_system.fragments.HomeFragment;
-import com.example.two_wheeler_schedule_management_system.fragments.ServicingFragment;
-import com.example.two_wheeler_schedule_management_system.fragments.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ActivityDashboard extends AppCompatActivity {
@@ -21,7 +18,6 @@ public class ActivityDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        getSupportActionBar().hide();
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigat);
         bottomNav.setOnNavigationItemSelectedListener(navigationListner);
@@ -58,7 +54,6 @@ public class ActivityDashboard extends AppCompatActivity {
                     return true;
                 }
             };
-
 
 
 }

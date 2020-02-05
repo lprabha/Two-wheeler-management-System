@@ -4,25 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.SettingFragment">
+    tools:context=".SettingFragment">
 
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigat"/>
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigat"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation"
-        android:background="?android:attr/windowBackground"
-        android:animateLayoutChanges="false"
-        app:itemIconSize="25dp"
-        />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="settings"/>
 </RelativeLayout>

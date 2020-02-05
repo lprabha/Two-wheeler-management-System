@@ -3,71 +3,101 @@ package com.example.two_wheeler_schedule_management_system.Models;
 public class UserModel {
 
 
-    private  String uId;
-    private String uname;
-    private String upassword;
-    private String uphone;
-    private String uemail;
-    private String profilePic;
+    private  Boolean userAdmin;
+    private String fullname;
+    private String username;
+    private String address;
+    private String phonenumber;
+    private String gender;
+    private String email;
+    private String password;
 
-    public UserModel(String uname, String upassword, String uphone, String uemail, String profilePicture) {
-        this.uname = uname;
-        this.upassword = upassword;
-        this.uphone = uphone;
-        this.uemail = uemail;
-        this.profilePic = profilePic;
+
+    public UserModel(String username, String address, String phonenumber, String email, String password) {
+        this.username = username;
+        this.address = address;
+        this.phonenumber = phonenumber;
+        this.email = email;
+        this.password = password;
     }
 
-    public UserModel(String uname, String upassword, String uphone, String uemail) {
-        this.uname = uname;
-        this.upassword = upassword;
-        this.uphone = uphone;
-        this.uemail = uemail;
-    }
-    public UserModel(String uname, String upassword) {
-        this.uname = uname;
-        this.upassword = upassword;
-    }
-    public String getUname() {
-        return uname;
+    public UserModel(Boolean userAdmin, String fullname, String username, String address, String phonenumber, String gender, String email, String password) {
+        this.userAdmin = userAdmin;
+        this.fullname = fullname;
+        this.username = username;
+        this.address = address;
+        this.phonenumber = phonenumber;
+        this.gender = gender;
+        this.email = email;
+        this.password = password;
     }
 
-    public void setUname(String uname) {
-        this.uname = uname;
+    public UserModel(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
-    public String getUpassword() {
-        return upassword;
+    public Boolean getUserAdmin() {
+        return userAdmin;
     }
 
-    public void setUpassword(String upassword) {
-        this.upassword = upassword;
+    public void setUserAdmin(Boolean userAdmin) {
+        this.userAdmin = userAdmin;
     }
 
-    public String getUphone() {
-        return uphone;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setUphone(String uphone) {
-        this.uphone = uphone;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
-    public String getUemail() {
-        return uemail;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUemail(String uemail) {
-        this.uemail = uemail;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getProfilePic() {
-        return profilePic;
+    public String getAddress() {
+        return address;
     }
 
-    public void setProfilePic(String profilePic) {
-        this.profilePic = profilePic;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
+    public String getPhonenumber() {
+        return phonenumber;
+    }
 
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
 
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

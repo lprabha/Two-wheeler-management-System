@@ -4,25 +4,179 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ServicingFragment">
-
-    <FrameLayout
-        android:id="@+id/fragmentContainer"
+    android:orientation="vertical"
+    tools:context=".ServicingFragment">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/twservicing"/>
+    <ImageView
+        android:id="@+id/bannerImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomNavigat"/>
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner"> </ImageView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigat"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:layout_alignParentBottom="true"
-        app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation"
-        android:background="?android:attr/windowBackground"
-        android:animateLayoutChanges="false"
-        app:itemIconSize="25dp"
-        />
+        android:layout_height="wrap_content"
+        android:padding="40dp"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:rowCount="1"
+        android:id="@+id/cardServicing"
+        android:layout_below="@+id/bannerImage">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/cardcleaning">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/cleaningIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/booking">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cleaning">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/cardfullservicing">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/fullservicingIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/service">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Full Servicing">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/cardrepair">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/repairIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/emergency">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Maintinance">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/cardhomeServicing">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/homeServicingIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/servicecenter">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="On Call Home Service">
+
+                </TextView>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/btnBookNow"
+        android:layout_below="@+id/cardServicing"
+        android:text="Book Now"/>
+
 
 </RelativeLayout>

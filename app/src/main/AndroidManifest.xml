@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.two_wheeler_schedule_management_system">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,9 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ActivityDashboard"/>
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".ActivityDashboard"/>
+        <activity android:name=".BookNowActivity" />
 
-        </activity>
     </application>
 
 </manifest>

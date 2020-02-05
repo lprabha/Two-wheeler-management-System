@@ -16,7 +16,7 @@ public interface UserApi {
     Call<Void> signup(@Body UserModel user);
 
     @POST("users/login")
-    Call<Void> login(@Body UserModel user);
+    Call<UserResponse> login(@Body UserModel user);
 
     @Multipart
     @POST("/upload")
