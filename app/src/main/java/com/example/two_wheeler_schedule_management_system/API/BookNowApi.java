@@ -11,8 +11,9 @@ import retrofit2.http.POST;
 
 public interface BookNowApi {
 
+
     @GET("booking")
-    Call<List<BookingModel>> getbooking();
+    Call<List<BookingModel>> getbooking(BookingModel booking);
 
     @POST("booking")
     Call<BookingModel> booknow(@Body BookingModel booking);
