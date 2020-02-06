@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
 
@@ -67,7 +68,7 @@ public class SignUpActivity extends AppCompatActivity {
         ucpassword = signup_cpassword.getText().toString();
 
         UserModel userModel = new UserModel( uname,uemail,uphone,upassword,ucpassword );
-        UserApi  userApi = Url.getInstance().create( UserApi.class );
+        UserApi userApi = Url.getInstance().create( UserApi.class );
         Call<Void> signup = userApi.signup(userModel);
         signup.enqueue( new Callback<Void>() {
             @Override
@@ -85,7 +86,5 @@ public class SignUpActivity extends AppCompatActivity {
                 Toast.makeText(SignUpActivity.this, "Error: " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         } );
-
-
     }
 }

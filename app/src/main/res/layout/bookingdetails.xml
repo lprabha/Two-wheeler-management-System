@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.HomeFragment"
+    android:padding="40dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/client"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Client Name"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/clientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client Name"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vName"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Name"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/vehicleName"
+            android:text="Vehicle Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/servicingType-layout"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Servicing Type"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/servicingType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicing Type"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vehicleNumber-layout"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Number"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/vehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Vehicle Number"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookingName-layout"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking Name"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/bookingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Booking Name"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/servicingprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DateTime_layout"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DateTime"
+            android:textSize="20dp"
+            android:textColor="@color/colorDark"/>
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Date Time"
+            android:paddingTop="20dp"
+            android:singleLine="true"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorDarkGrey"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>
