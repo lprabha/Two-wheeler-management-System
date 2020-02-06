@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView( R.layout.activity_login );
         getSupportActionBar().hide();
 
-        uname = findViewById( R.id.twUsername );
+
         upassword = findViewById( R.id.twPassword );
         twsignup = findViewById( R.id.tvSignUp );
         twforgot = findViewById( R.id.tvHelpSignIn );
@@ -66,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText( LoginActivity.this, "Error", Toast.LENGTH_SHORT ).show();
+                    return;
                 }
                 Toast.makeText( LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT ).show();
                 Toast.makeText( LoginActivity.this, "token" + response.body().getToken(), Toast.LENGTH_SHORT ).show();
@@ -75,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
-                Toast.makeText( LoginActivity.this, "Error:", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( LoginActivity.this, "Error:"+ t.getLocalizedMessage() , Toast.LENGTH_SHORT ).show();
             }
         } );
     }

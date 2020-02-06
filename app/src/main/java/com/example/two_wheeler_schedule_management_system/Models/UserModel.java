@@ -3,7 +3,7 @@ package com.example.two_wheeler_schedule_management_system.Models;
 public class UserModel {
 
 
-    private  Boolean userAdmin;
+    private Boolean userAdmin;
     private String fullname;
     private String username;
     private String address;

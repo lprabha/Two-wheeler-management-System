@@ -29,11 +29,11 @@ public class BookNowActivity extends AppCompatActivity implements AdapterView.On
          spinner.setAdapter(adapter);
          spinner.setOnItemSelectedListener(this);
 
-         final Spinner vspineer = findViewById(R.id.VehicleName_spinner);
+         final Spinner vspinner = findViewById(R.id.VehicleName_spinner);
          ArrayAdapter<CharSequence> Vadapter = ArrayAdapter.createFromResource( this,R.array.VehicleName_spinner,android.R.layout.simple_spinner_item );
          Vadapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
-         spinner.setAdapter(Vadapter);
-         spinner.setOnItemSelectedListener(this);
+         vspinner.setAdapter(Vadapter);
+         vspinner.setOnItemSelectedListener(this);
 
          viewValue();
 
@@ -70,7 +70,7 @@ public class BookNowActivity extends AppCompatActivity implements AdapterView.On
                  vehicleNumber = etvehicleNumber.getText().toString();
                  price = etprice.getText().toString();
                  time = ettime.getText().toString();
-                 vehicleName = vspineer.getSelectedItem().toString();
+                 vehicleName = vspinner.getSelectedItem().toString();
                  servicingType =spinner.getSelectedItem().toString();
                  Intent IntentForm = new Intent( BookNowActivity.this, BookingFragment.class );
                  IntentForm.putExtra( "Client",client );
