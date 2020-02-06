@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="40dp">
+    android:padding="40dp"
+    tools:context=".ActivityAbout">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +33,7 @@
                 android:text="Welcome to Two wheeler"
                 android:textColor="@color/colorDark"
                 android:textSize="12pt"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -40,14 +41,14 @@
                 android:text="Vission"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="8pt"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:text="We want to provide Two wheeler servicing and maintainance service that save customer time and also create customer awareness by providing transparent pricing and terms."
-                android:textColor="@color/colorGrey"></TextView>
+                android:textColor="@color/colorGrey"/>
 
 
             <TextView
@@ -56,14 +57,14 @@
                 android:text="Mission"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="8pt"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:text="To provide Quality assured two wheeler servicing at an affordable price. Handle all sort of repair and maintenance of two wheeler by providing Geniune spare parts."
-                android:textColor="@color/colorGrey"></TextView>
+                android:textColor="@color/colorGrey"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -79,9 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="In 2018 A.D, we established a company called ThirdWheel with a mission to help general public by providing them two wheeler services in a convenient and reliable way through mobile app. Initially, started with just regular servicing, we are now adding up services like emergency services, blue book renew, bike accessories etc. As time went on, we have been adding additional features in our app and providing other additional services which may be helpful for people in their daily life."
-                android:textColor="@color/colorGrey">
-
-            </TextView>
+                android:textColor="@color/colorGrey"/>
 
         </LinearLayout>
     </ScrollView>
