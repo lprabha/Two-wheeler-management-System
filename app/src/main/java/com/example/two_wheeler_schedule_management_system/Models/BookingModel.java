@@ -1,7 +1,5 @@
 package com.example.two_wheeler_schedule_management_system.Models;
 
-import android.widget.Adapter;
-import android.widget.Spinner;
 
 public class BookingModel {
 

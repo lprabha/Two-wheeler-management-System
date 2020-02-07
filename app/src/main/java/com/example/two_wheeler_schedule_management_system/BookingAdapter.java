@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.activity.BookingDetails;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
 
     private List<BookingModel> bookingList;
 
-    public BookingAdapter(List<BookingModel> bookingList) {
+    public BookingAdapter(BookingDetails bookingDetails, List<BookingModel> bookingList) {
         this.bookingList = bookingList;
     }
 
@@ -71,7 +72,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingV
         }
     }
 
-    public BookingAdapter(MainActivity bookingDetails, List<BookingModel> bookingModelList) {
+    public BookingAdapter(List<BookingModel> bookingModelList) {
 
     }
 
