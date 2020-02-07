@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorLight"
     android:orientation="vertical"
-    tools:context=".ActivityContact">
+    tools:context=".activity.ActivityContact">
 
     <ScrollView
         android:layout_width="match_parent"

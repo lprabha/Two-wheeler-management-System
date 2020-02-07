@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,7 +14,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.two_wheeler_schedule_management_system.API.BookNowApi;
+import com.example.two_wheeler_schedule_management_system.MainActivity;
 import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.R;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
 import retrofit2.Call;
 import retrofit2.Callback;

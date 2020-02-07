@@ -12,7 +12,7 @@ import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.two_wheeler_schedule_management_system.BookNowActivity;
+import com.example.two_wheeler_schedule_management_system.activity.BookNowActivity;
 import com.example.two_wheeler_schedule_management_system.R;
 
 

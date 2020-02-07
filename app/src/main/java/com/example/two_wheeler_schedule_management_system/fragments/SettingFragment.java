@@ -12,8 +12,8 @@ import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.two_wheeler_schedule_management_system.ActivityAbout;
-import com.example.two_wheeler_schedule_management_system.ActivityContact;
+import com.example.two_wheeler_schedule_management_system.activity.ActivityAbout;
+import com.example.two_wheeler_schedule_management_system.activity.ActivityContact;
 import com.example.two_wheeler_schedule_management_system.FAQ;
 import com.example.two_wheeler_schedule_management_system.MainActivity;
 import com.example.two_wheeler_schedule_management_system.R;

@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,7 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
+import com.example.two_wheeler_schedule_management_system.R;
+import com.example.two_wheeler_schedule_management_system.SignUpActivity;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
+import com.example.two_wheeler_schedule_management_system.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

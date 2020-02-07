@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.two_wheeler_schedule_management_system.R;
 import com.example.two_wheeler_schedule_management_system.fragments.BookingFragment;
 import com.example.two_wheeler_schedule_management_system.fragments.HomeFragment;
 import com.example.two_wheeler_schedule_management_system.fragments.ServicingFragment;
@@ -19,7 +20,7 @@ public class ActivityDashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        setContentView( R.layout.activity_dashboard);
 
 
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigat);

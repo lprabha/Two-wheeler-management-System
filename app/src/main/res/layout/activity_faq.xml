@@ -9,22 +9,6 @@
     tools:context=".FAQ"
     tools:ignore="ResAuto">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <com.riyagayasen.easyaccordion.AccordionView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:id="@+id/first_accordion"
-            android:visibility="visible"
-            app:isAnimated="true"
-            app:heading="This is a demo accordion"
-            app:isExpanded="true"
-            app:isPartitioned="true"
-            android:layout_alignParentLeft="true">
 
             <TextView
                 android:id="@+id/firstans"
@@ -33,26 +17,5 @@
                 android:text="Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text" />
 
 
-        </com.riyagayasen.easyaccordion.AccordionView> <com.riyagayasen.easyaccordion.AccordionView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:id="@+id/second_accordion"
-            android:visibility="visible"
-            app:isAnimated="true"
-            app:heading="This is a demo accordion"
-            app:isExpanded="true"
-            app:isPartitioned="true"
-            android:layout_alignParentLeft="true">
 
-            <TextView
-                android:id="@+id/secondans"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text Demo accordion text" />
-
-
-        </com.riyagayasen.easyaccordion.AccordionView>
-
-    </RelativeLayout>
 </LinearLayout>

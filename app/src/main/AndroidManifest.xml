@@ -15,20 +15,20 @@
         <activity android:name=".SignUpActivity">
 
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityDashboard"/>
+        <activity android:name=".activity.ActivityDashboard"/>
         <activity android:name=".MainActivity"
-            android:parentActivityName=".ActivityDashboard"/>
-        <activity android:name=".BookNowActivity" />
-        <activity android:name=".ActivityAbout" />
-        <activity android:name=".ActivityContact" />
-        <activity android:name=".UserDetailsActivity" />
+            android:parentActivityName=".activity.ActivityDashboard"/>
+        <activity android:name=".activity.BookNowActivity" />
+        <activity android:name=".activity.ActivityAbout" />
+        <activity android:name=".activity.ActivityContact" />
+        <activity android:name=".activity.UserDetailsActivity" />
 
     </application>
 
