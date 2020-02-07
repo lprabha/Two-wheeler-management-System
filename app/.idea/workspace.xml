@@ -9,7 +9,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adeea8c9-369f-41a4-84d3-6c5a7cff5dcc" name="Default Changelist" comment="" />
+    <list default="true" id="adeea8c9-369f-41a4-84d3-6c5a7cff5dcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/NotificationManager.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,44 +49,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/FAQ.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/BookNowActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/UserDetailsActivity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="555">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,10 +62,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/BookingAdapter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/CreateChannels.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="285">
+              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,56 +74,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_faq.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/ActivityAbout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/ActivityContact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/activity/ActivityDashboard.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+            <state relative-caret-position="465">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
             </state>
           </provider>
         </entry>
@@ -204,7 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/fragments/BookingFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/UserResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/UserApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/URL/Url.java" />
@@ -224,7 +152,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Models/PartsModel.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/bookingdetails.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/BookingFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/BookNowApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/LoginActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/NotificationManager.java" />
@@ -235,7 +162,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Models/BookingModel.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_dashboard.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_fragment_home.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_user_profile.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/ServiceCenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/UserDetailsActivity.java" />
@@ -255,6 +181,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/BookingAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/FAQ.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/activity_faq.xml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/CreateChannels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java" />
       </list>
     </option>
   </component>
@@ -286,6 +215,11 @@
             <path>
               <item name="Two-wheeler-schedule-management-System" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="Two-wheeler-schedule-management-System" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -300,17 +234,6 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="two_wheeler_schedule_management_system" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="activity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Two-wheeler-schedule-management-System" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Two-wheeler-schedule-management-System" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="Two-wheeler-schedule-management-System" type="1abcf292:AndroidViewProjectNode" />
@@ -334,17 +257,17 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.two_wheeler_schedule_management_system" />
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.example.two_wheeler_schedule_management_system" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system" />
-    </key>
     <key name="android.template.packageName">
       <recent name="com.example.two_wheeler_schedule_management_system.fragments" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.two_wheeler_schedule_management_system" />
@@ -352,8 +275,8 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/res/drawable" />
     </key>
-    <key name="android.template.parentActivityClass">
-      <recent name="" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.two_wheeler_schedule_management_system" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -570,7 +493,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.30414745" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.32258064" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -596,6 +519,34 @@
       <window_info anchor="right" id="Preview" order="4" weight="0.35623002" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12886049" />
+      <window_info id="Structure" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Build Variants" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="5" />
+      <window_info id="Designer" order="6" />
+      <window_info id="Resources Explorer" order="7" weight="0.32960597" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="0" sideWeight="0.49928468" weight="0.3299363" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4954683" weight="0.3808917" />
+      <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.49928468" weight="0.32866243" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32953367" />
+      <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4985694" weight="0.2624204" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50453174" side_tool="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.4946752" visible="true" weight="0.24870466" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" sideWeight="0.49928468" weight="0.3299363" />
+      <window_info anchor="bottom" id="Debug" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49785408" weight="0.3299363" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32953367" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" weight="0.3290735" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Preview" order="4" weight="0.33013844" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add: user profile layout" />
@@ -621,13 +572,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Removed: unwanted files" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Models/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/UserResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -637,13 +581,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/SubscriptionFragment.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Chanel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/NotificationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/API/UserApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -699,13 +636,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -784,16 +714,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_servicecenter.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -893,14 +813,6 @@
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/SettingFragment.java" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_fragment_setting.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -989,6 +901,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/NotificationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/CreateChannels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/two_wheeler_schedule_management_system/Broadcast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
