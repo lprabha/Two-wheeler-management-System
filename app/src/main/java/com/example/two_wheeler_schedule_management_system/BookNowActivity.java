@@ -80,7 +80,7 @@ public class BookNowActivity extends AppCompatActivity implements AdapterView.On
                  }
                      Book();
 
-                 Intent IntentForm = new Intent( BookNowActivity.this, BookingDetails.class );
+                 Intent IntentForm = new Intent( BookNowActivity.this, MainActivity.class );
                  startActivity( IntentForm );
 
              }

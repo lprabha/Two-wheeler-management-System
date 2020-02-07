@@ -26,6 +26,9 @@
         <activity android:name=".MainActivity"
             android:parentActivityName=".ActivityDashboard"/>
         <activity android:name=".BookNowActivity" />
+        <activity android:name=".ActivityAbout" />
+        <activity android:name=".ActivityContact" />
+        <activity android:name=".UserDetailsActivity" />
 
     </application>
 
