@@ -7,9 +7,9 @@
 
     </item>
 
-    <item android:id="@+id/navigation_servicing"
+    <item android:id="@+id/navigation_notification"
         android:icon="@drawable/notification"
-        android:title="Servicing">
+        android:title="Notification">
 
     </item>
 

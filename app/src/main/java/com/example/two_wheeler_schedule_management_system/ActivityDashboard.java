@@ -7,7 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.two_wheeler_schedule_management_system.fragments.BookingFragment;
 import com.example.two_wheeler_schedule_management_system.fragments.HomeFragment;
+import com.example.two_wheeler_schedule_management_system.fragments.ServicingFragment;
+import com.example.two_wheeler_schedule_management_system.fragments.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class ActivityDashboard extends AppCompatActivity {

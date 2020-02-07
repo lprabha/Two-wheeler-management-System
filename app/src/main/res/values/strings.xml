@@ -2,9 +2,9 @@
     <string name="app_name">Two-wheeler-schedule-management-System</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Home</string>
-    <string name="title_service">servicing</string>
-    <string name="title_setting">setting</string>
-    <string name="title_booking">booking</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_setting">Setting</string>
+    <string name="title_booking">Booking</string>
     <string-array name="VehicleName_spinner">
         <item>Aprila</item>
         <item>Dio</item>

@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/navigation_servicing"
         android:name="com.example.two_wheeler_schedule_management_system.fragments."
-        android:label="@string/title_service"
+        android:label="@string/title_notification"
         tools:layout="@layout/activity_fragment_servicing" />
 
     <fragment

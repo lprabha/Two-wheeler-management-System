@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.fragments;
 
 import android.content.Intent;
 import android.os.Build;
@@ -11,6 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+
+import com.example.two_wheeler_schedule_management_system.ActivityAbout;
+import com.example.two_wheeler_schedule_management_system.ActivityContact;
+import com.example.two_wheeler_schedule_management_system.FAQ;
+import com.example.two_wheeler_schedule_management_system.MainActivity;
+import com.example.two_wheeler_schedule_management_system.R;
 
 
 public class SettingFragment extends Fragment {

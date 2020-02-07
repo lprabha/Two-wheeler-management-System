@@ -1,6 +1,5 @@
 package com.example.two_wheeler_schedule_management_system.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.two_wheeler_schedule_management_system.BookingFragment;
 import com.example.two_wheeler_schedule_management_system.R;
-import com.example.two_wheeler_schedule_management_system.ServicingFragment;
 
 public class HomeFragment extends Fragment {
 
