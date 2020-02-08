@@ -58,9 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Booking">
-
-                    </TextView>
+                        android:text="Booking"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -93,9 +91,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Servicing">
-
-                    </TextView>
+                        android:text="Servicing"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -127,9 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="emergency">
-
-                    </TextView>
+                        android:text="emergency"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -161,9 +155,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="servicecenter">
-
-                    </TextView>
+                        android:text="servicecenter"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -195,9 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Subscription">
-
-                    </TextView>
+                        android:text="Subscription"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -229,9 +219,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="feedback">
-
-                    </TextView>
+                        android:text="feedback"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
