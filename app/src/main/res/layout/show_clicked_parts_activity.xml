@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowClickedParts"
+    android:background="@color/colorLight">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="PARTS DETAILS"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorDark"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/partsimage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@+id/title"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/showpartsname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/partsimage"
+                android:text="Parts Name: " />
+
+            <TextView
+                android:id="@+id/showprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/partsimage"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/showpartsname"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/showmodel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/showpartsname"
+                android:layout_marginTop="10dp"
+                android:text="Model : " />
+
+
+
+
+            <Button
+                android:id="@+id/bookparts"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/showdescription"
+                android:layout_marginTop="30dp"
+                android:text="Book" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
