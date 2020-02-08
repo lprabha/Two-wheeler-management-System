@@ -29,6 +29,7 @@
         <activity android:name=".activity.ActivityAbout" />
         <activity android:name=".activity.ActivityContact" />
         <activity android:name=".activity.UserDetailsActivity" />
+        <activity android:name=".Show_Parts"/>
 
     </application>
 
