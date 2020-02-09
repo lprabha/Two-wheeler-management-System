@@ -3,17 +3,16 @@ package com.example.two_wheeler_schedule_management_system.Models;
 
 public class BookingModel {
 
-    public BookingModel(String name, String type, String client, String vehicleName, String servicingType, String bookingName, String vehicleNumber, String price, String time) {
+    public BookingModel(String name, String type, String client, String vehicleName, String servicingType, String vehicleNumber, String price, String time) {
         this.client = client;
         this.vehicleName = vehicleName;
         this.servicingType = servicingType;
-        this.bookingName = bookingName;
         this.vehicleNumber = vehicleNumber;
         this.price = price;
         this.time = time;
     }
 
-    private String client;
+
 
     public String getClient() {
         return client;
@@ -37,14 +36,6 @@ public class BookingModel {
 
     public void setServicingType(String servicingType) {
         this.servicingType = servicingType;
-    }
-
-    public String getBookingName() {
-        return bookingName;
-    }
-
-    public void setBookingName(String bookingName) {
-        this.bookingName = bookingName;
     }
 
     public String getVehicleNumber() {
@@ -71,10 +62,11 @@ public class BookingModel {
         this.time = time;
     }
 
+    private String client;
     private String vehicleName;
-    private String servicingType;
-    private String bookingName;
     private String vehicleNumber;
+    private String servicingType;
+
     private String price;
     private String time;
 
