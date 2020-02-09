@@ -1,5 +1,7 @@
 package com.example.two_wheeler_schedule_management_system.API;
 
+import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.ServerResponse.BookingResponse;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.FeedbackResponse;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.ImageResponse;
 import com.example.two_wheeler_schedule_management_system.Models.Feedback;
@@ -32,5 +34,8 @@ public interface UserApi {
 
     @POST("complain")
     Call<FeedbackResponse> feedbackDetail(Feedback feedback);
+
+    @POST("booking")
+    Call<BookingResponse> bookingDetail(BookingModel bookingModel);
 }
 

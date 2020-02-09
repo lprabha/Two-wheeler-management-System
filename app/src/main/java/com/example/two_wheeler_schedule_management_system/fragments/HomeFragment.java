@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.example.two_wheeler_schedule_management_system.MainFeedback;
 import com.example.two_wheeler_schedule_management_system.R;
 import com.example.two_wheeler_schedule_management_system.Show_Parts;
+import com.example.two_wheeler_schedule_management_system.activity.BookNowActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -45,8 +46,8 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                getActivity().getSupportFragmentManager().beginTransaction().replace( R.id.fragmentContainer,
-                        new BookingFragment() ).commit();
+                Intent intent = new Intent( getActivity(), BookNowActivity.class );
+                startActivity( intent );
 
             }
         } );

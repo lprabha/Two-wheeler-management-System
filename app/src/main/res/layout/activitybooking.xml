@@ -15,7 +15,7 @@
         android:padding="40dp">
 
 
-        <EditText
+        <TextView
             android:id="@+id/clientName"
             android:hint="Client Name"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:background="@color/colorLightGrey"
             android:layout_marginBottom="30dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/VehicleNumber"
             android:hint="Vehicle Number"
             android:layout_width="match_parent"
@@ -54,32 +54,14 @@
             android:layout_marginBottom="30dp"
             android:textSize="16sp"
             android:singleLine="true"/>
-
-        <EditText
-            android:id="@+id/BookingName"
-            android:hint="Booking Name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorLightGrey"
-            android:paddingHorizontal="15dp"
-            android:textColor="@color/colorDark"
-            android:textColorHint="@color/colorDarkGrey"
-            android:layout_marginBottom="30dp"
-            android:textSize="16sp"
-            android:singleLine="true"/>
-        <EditText
-            android:id="@+id/price"
+        <Spinner
+            android:id="@+id/price_spinner"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Price"
             android:background="@color/colorLightGrey"
-            android:paddingHorizontal="15dp"
-            android:textColor="@color/colorDark"
-            android:textColorHint="@color/colorDarkGrey"
-            android:layout_marginBottom="30dp"
-            android:textSize="16sp"
-            android:singleLine="true"/>
-        <EditText
+            android:layout_marginBottom="30dp"/>
+        <TextView
             android:id="@+id/DateTime"
             android:layout_width="match_parent"
             android:layout_height="50dp"
