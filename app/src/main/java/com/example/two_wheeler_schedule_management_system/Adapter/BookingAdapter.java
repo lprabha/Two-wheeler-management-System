@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.Adapter;
 
 import android.os.StrictMode;
 import android.view.LayoutInflater;
@@ -10,13 +10,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.two_wheeler_schedule_management_system.MainActivity;
 import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.R;
 
 import java.util.List;
 
 public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.BookingViewHolder> {
-
-    public static final String BASE_URL = "http://10.0.2.2:3001/";
 
     private List<BookingModel> bookingList;
 

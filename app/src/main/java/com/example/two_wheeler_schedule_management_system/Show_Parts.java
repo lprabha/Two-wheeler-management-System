@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.two_wheeler_schedule_management_system.API.ShowPartsAPI;
+import com.example.two_wheeler_schedule_management_system.Adapter.PartsAdapter;
 import com.example.two_wheeler_schedule_management_system.Models.PartsModel;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
 
@@ -32,7 +33,7 @@ public class Show_Parts extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.show_parts_activity);
 
-        recyclerView=findViewById(R.id.recyclerView);
+        recyclerView=findViewById(R.id.rv_show_parts);
         getParts();
 //        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),1));
 
