@@ -5,7 +5,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 
-class CreateChannels {
+public class CreateChannels {
     public final static String CHANNEL_1 = "Channel1";
     public final static String CHANNEL_2 = "Channel2";
     Context context;

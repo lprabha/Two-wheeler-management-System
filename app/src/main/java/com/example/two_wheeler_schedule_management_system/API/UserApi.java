@@ -14,6 +14,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Part;
 
 
@@ -37,5 +38,8 @@ public interface UserApi {
 
     @POST("booking")
     Call<BookingResponse> bookingDetail(BookingModel bookingModel);
+
+    @PUT("users/userupdate")
+    Call<UserResponse> userUpate(String token, String id, String fullName, String email, String userName, String address, String phone);
 }
 
