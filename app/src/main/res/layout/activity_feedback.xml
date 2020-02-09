@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp"
+    tools:context=".MainFeedback">
+
+    <TextView
+        android:id="@+id/tvname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pleae Give your View About this App"
+        android:textSize="20dp"
+        android:textColor="@color/colorDark"/>
+    <EditText
+        android:id="@+id/clientTopic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Topic"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/clientFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Feedback"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="20sp"/>
+    <Button
+        android:id="@+id/btnpost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorDark"
+        android:layout_gravity="center"
+        android:text="Post"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:layout_marginTop="10sp"
+        />
+</LinearLayout>
