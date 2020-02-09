@@ -15,7 +15,7 @@ import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.R;
 import com.example.two_wheeler_schedule_management_system.SignUpActivity;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
-import com.example.two_wheeler_schedule_management_system.UserResponse;
+import com.example.two_wheeler_schedule_management_system.ServerResponse.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

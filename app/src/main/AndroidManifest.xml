@@ -3,6 +3,8 @@
     package="com.example.two_wheeler_schedule_management_system">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -29,6 +31,8 @@
         <activity android:name=".activity.ActivityAbout" />
         <activity android:name=".activity.ActivityContact" />
         <activity android:name=".activity.UserDetailsActivity" />
+        <activity android:name=".Show_Parts"/>
+        <activity android:name=".MainFeedback"/>
 
     </application>
 

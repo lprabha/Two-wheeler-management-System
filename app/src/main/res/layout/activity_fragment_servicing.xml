@@ -56,9 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Cleaning">
-
-                </TextView>
+                    android:text="Cleaning"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -90,9 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Full Servicing">
-
-                </TextView>
+                    android:text="Full Servicing"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -124,9 +120,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Maintinance">
-
-                </TextView>
+                    android:text="Maintinance"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -158,9 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="On Call Home Service">
-
-                </TextView>
+                    android:text="On Call Home Service"/>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
