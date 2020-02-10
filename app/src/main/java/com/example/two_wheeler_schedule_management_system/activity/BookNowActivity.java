@@ -32,7 +32,7 @@ import retrofit2.Response;
 
 public class BookNowActivity extends AppCompatActivity {
     TextView  ettime;
-    EditText etclient, etvehicleNumber;
+    EditText etclient;
     String id;
     int year3;
     int month3;
@@ -46,12 +46,10 @@ public class BookNowActivity extends AppCompatActivity {
         setContentView( R.layout.activitybooking );
 
         etclient = findViewById( R.id.clientName );
-        etvehicleNumber = findViewById( R.id.VehicleNumber );
         ettime = findViewById( R.id.DateTime );
         BtnBookNow = findViewById( R.id.btnBookNow );
 
         ServicingType_spinner = findViewById( R.id.ServicingType_spinner );
-        VehicleName_spinner = findViewById( R.id.VehicleName_spinner );
         price_spinner = findViewById( R.id.price_spinner );
 
 
@@ -64,15 +62,11 @@ public class BookNowActivity extends AppCompatActivity {
             }
         } );
 
-        String servicingType[] = {"Click here to Select Servicing Type", "Cleaning", "Full Servicing", "Maintinance", "On Call Home Service"};
+        String servicingType[] = {"Servicing Type", "Cleaning", "Full Servicing", "Maintinance", "On Call Home Service"};
         ArrayAdapter adapter = new ArrayAdapter<>( this,android.R.layout.simple_expandable_list_item_1, servicingType);
         ServicingType_spinner.setAdapter( adapter );
 
-        String vehicleName[] = {"Click here to Select Servicing Type", "Cleaning", "Full Servicing", "Maintinance", "On Call Home Service"};
-        ArrayAdapter vadapter = new ArrayAdapter<>( this,android.R.layout.simple_expandable_list_item_1, vehicleName);
-        VehicleName_spinner.setAdapter( vadapter );
-
-        String price[] = {"Click here to Select Servicing Type", "Cleaning", "Full Servicing", "Maintinance", "On Call Home Service"};
+        String price[] = {"Price of servicing","500", "200", "300", "100"};
         ArrayAdapter padapter = new ArrayAdapter<>( this,android.R.layout.simple_expandable_list_item_1, price);
         price_spinner.setAdapter( padapter );
 
@@ -125,13 +119,11 @@ public class BookNowActivity extends AppCompatActivity {
 
     private void Booking() {
         String client = etclient.getText().toString();
-        String vehicleNumber = etvehicleNumber.getText().toString();
         String date = ettime.getText().toString();
         String ServicingType = ServicingType_spinner.getSelectedItem().toString();
-        String VehicleName = VehicleName_spinner.getSelectedItem().toString();
         String price = price_spinner.getSelectedItem().toString();
 
-        BookingModel bookingModel = new BookingModel(client,vehicleNumber,date,ServicingType,VehicleName,price);
+        BookingModel bookingModel = new BookingModel(client,date,ServicingType,price);
         UserApi usersAPI = Url.getInstance().create(UserApi.class);
         Call<BookingResponse> bookingCall = usersAPI.bookingDetail(Url.token, bookingModel);
 

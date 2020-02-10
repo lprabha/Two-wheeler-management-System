@@ -3,16 +3,6 @@ package com.example.two_wheeler_schedule_management_system.Models;
 
 public class BookingModel {
 
-    public BookingModel(String client, String vehicleNumber, String time,  String servicingType, String vehicleName, String price  ) {
-        this.client = client;
-        this.vehicleName = vehicleName;
-        this.servicingType = servicingType;
-        this.vehicleNumber = vehicleNumber;
-        this.price = price;
-        this.time = time;
-    }
-
-
 
     public String getClient() {
         return client;
@@ -20,14 +10,6 @@ public class BookingModel {
 
     public void setClient(String client) {
         this.client = client;
-    }
-
-    public String getVehicleName() {
-        return vehicleName;
-    }
-
-    public void setVehicleName(String vehicleName) {
-        this.vehicleName = vehicleName;
     }
 
     public String getServicingType() {
@@ -38,20 +20,12 @@ public class BookingModel {
         this.servicingType = servicingType;
     }
 
-    public String getVehicleNumber() {
-        return vehicleNumber;
+    public String getServicingPrice() {
+        return servicingPrice;
     }
 
-    public void setVehicleNumber(String vehicleNumber) {
-        this.vehicleNumber = vehicleNumber;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
+    public void setServicingPrice(String servicingPrice) {
+        this.servicingPrice = servicingPrice;
     }
 
     public String getTime() {
@@ -63,11 +37,15 @@ public class BookingModel {
     }
 
     private String client;
-    private String vehicleName;
-    private String vehicleNumber;
     private String servicingType;
-
-    private String price;
+    private String servicingPrice;
     private String time;
 
+
+    public BookingModel(String client, String servicingType, String servicingPrice, String time) {
+        this.client = client;
+        this.servicingType = servicingType;
+        this.servicingPrice = servicingPrice;
+        this.time = time;
+    }
 }
