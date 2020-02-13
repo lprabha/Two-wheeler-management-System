@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookNowActivity">
+    tools:context=".activity.BookNowActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,15 +28,17 @@
         <Spinner
             android:id="@+id/VehicleName_spinner"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="Vehicle Name"
-            android:background="@color/colorLightGrey" />
+            android:background="@color/colorLightGrey"
+            android:layout_marginBottom="30dp" />
         <Spinner
             android:id="@+id/ServicingType_spinner"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="Vehicle Name"
-            android:background="@color/colorLightGrey" />
+            android:layout_height="50dp"
+            android:hint="Servicing Type"
+            android:background="@color/colorLightGrey"
+            android:layout_marginBottom="30dp" />
 
         <EditText
             android:id="@+id/VehicleNumber"
@@ -53,7 +55,7 @@
 
         <EditText
             android:id="@+id/BookingName"
-            android:hint="Vehicle Model"
+            android:hint="Booking Name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/colorLightGrey"

@@ -1,6 +1,8 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.API;
 
+import com.example.two_wheeler_schedule_management_system.ImageResponse;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
+import com.example.two_wheeler_schedule_management_system.UserResponse;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;

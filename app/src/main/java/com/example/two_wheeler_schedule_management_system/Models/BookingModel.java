@@ -1,16 +1,11 @@
 package com.example.two_wheeler_schedule_management_system.Models;
 
+import android.widget.Adapter;
+import android.widget.Spinner;
+
 public class BookingModel {
 
-    private String client;
-    private String vehicleName;
-    private String servicingType;
-    private String bookingName;
-    private String vehicleNumber;
-    private String price;
-    private String time;
-
-    public BookingModel(String client, String vehicleName, String servicingType, String bookingName, String bookingType, String price, String time) {
+    public BookingModel(String name, String type, String client, String vehicleName, String servicingType, String bookingName, String vehicleNumber, String price, String time) {
         this.client = client;
         this.vehicleName = vehicleName;
         this.servicingType = servicingType;
@@ -20,6 +15,7 @@ public class BookingModel {
         this.time = time;
     }
 
+    private String client;
 
     public String getClient() {
         return client;
@@ -53,11 +49,11 @@ public class BookingModel {
         this.bookingName = bookingName;
     }
 
-    public String getBookingType() {
+    public String getVehicleNumber() {
         return vehicleNumber;
     }
 
-    public void setBookingType(String bookingType) {
+    public void setVehicleNumber(String vehicleNumber) {
         this.vehicleNumber = vehicleNumber;
     }
 
@@ -76,4 +72,12 @@ public class BookingModel {
     public void setTime(String time) {
         this.time = time;
     }
+
+    private String vehicleName;
+    private String servicingType;
+    private String bookingName;
+    private String vehicleNumber;
+    private String price;
+    private String time;
+
 }

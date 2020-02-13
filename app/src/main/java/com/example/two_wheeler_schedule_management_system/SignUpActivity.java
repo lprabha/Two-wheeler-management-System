@@ -9,8 +9,10 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
+import com.example.two_wheeler_schedule_management_system.activity.LoginActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -67,7 +69,7 @@ public class SignUpActivity extends AppCompatActivity {
         ucpassword = signup_cpassword.getText().toString();
 
         UserModel userModel = new UserModel( uname,uemail,uphone,upassword,ucpassword );
-        UserApi  userApi = Url.getInstance().create( UserApi.class );
+        UserApi userApi = Url.getInstance().create( UserApi.class );
         Call<Void> signup = userApi.signup(userModel);
         signup.enqueue( new Callback<Void>() {
             @Override
@@ -76,7 +78,7 @@ public class SignUpActivity extends AppCompatActivity {
                     Toast.makeText( SignUpActivity.this,"Code: " +response.body(), Toast.LENGTH_SHORT ).show();
                 }
                 Toast.makeText( SignUpActivity.this,"Signup completed.", Toast.LENGTH_SHORT ).show();
-                Intent intent=new Intent( SignUpActivity.this,LoginActivity.class );
+                Intent intent=new Intent( SignUpActivity.this, LoginActivity.class );
                 startActivity( intent );
             }
 
@@ -85,7 +87,5 @@ public class SignUpActivity extends AppCompatActivity {
                 Toast.makeText(SignUpActivity.this, "Error: " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         } );
-
-
     }
 }

@@ -1,4 +1,4 @@
-package com.example.two_wheeler_schedule_management_system;
+package com.example.two_wheeler_schedule_management_system.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
+import com.example.two_wheeler_schedule_management_system.R;
+import com.example.two_wheeler_schedule_management_system.SignUpActivity;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
+import com.example.two_wheeler_schedule_management_system.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView( R.layout.activity_login );
         getSupportActionBar().hide();
 
-        uname = findViewById( R.id.twUsername );
+
         upassword = findViewById( R.id.twPassword );
         twsignup = findViewById( R.id.tvSignUp );
         twforgot = findViewById( R.id.tvHelpSignIn );
@@ -66,6 +70,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (!response.isSuccessful()) {
                     Toast.makeText( LoginActivity.this, "Error", Toast.LENGTH_SHORT ).show();
+                    return;
                 }
                 Toast.makeText( LoginActivity.this, "Login Successful.", Toast.LENGTH_SHORT ).show();
                 Toast.makeText( LoginActivity.this, "token" + response.body().getToken(), Toast.LENGTH_SHORT ).show();
@@ -75,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
-                Toast.makeText( LoginActivity.this, "Error:", Toast.LENGTH_SHORT ).show();
+                Toast.makeText( LoginActivity.this, "Error:"+ t.getLocalizedMessage() , Toast.LENGTH_SHORT ).show();
             }
         } );
     }

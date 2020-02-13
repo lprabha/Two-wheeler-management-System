@@ -1,6 +1,5 @@
 package com.example.two_wheeler_schedule_management_system.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
-import com.example.two_wheeler_schedule_management_system.BookingFragment;
 import com.example.two_wheeler_schedule_management_system.R;
-import com.example.two_wheeler_schedule_management_system.ServicingFragment;
 
 public class HomeFragment extends Fragment {
 
@@ -24,9 +21,13 @@ CardView servicing, booking, emergency, servicecenter,subscription, feedback ;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.activity_fragment_home, container, false);
-        servicing = view.findViewById( R.id.cardServicing );
-        booking = view.findViewById( R.id.cardbooking );
+        View sview = inflater.inflate(R.layout.activity_fragment_home, container, false);
+        servicing = sview.findViewById( R.id.cardServicing );
+        booking = sview.findViewById( R.id.cardBooking );
+        emergency = sview.findViewById( R.id.cardemergency );
+        servicecenter = sview.findViewById( R.id.cardServiceCenter );
+        subscription = sview.findViewById( R.id.cardSubscription );
+        feedback = sview.findViewById( R.id.cardFeedback );
 
 
 
@@ -47,8 +48,44 @@ CardView servicing, booking, emergency, servicecenter,subscription, feedback ;
 
             }
         } );
+        emergency.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        return view;
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new BookingFragment()).commit();
+
+            }
+        } );
+        servicecenter.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new BookingFragment()).commit();
+
+            }
+        } );
+        subscription.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new BookingFragment()).commit();
+
+            }
+        } );
+        feedback.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainer,
+                        new BookingFragment()).commit();
+
+            }
+        } );
+
+        return sview;
     }
 
 }
