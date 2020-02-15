@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,7 +31,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class BookNowActivity extends AppCompatActivity {
-    TextView etclient, etvehicleNumber, ettime;
+    TextView  ettime;
+    EditText etclient, etvehicleNumber;
     String id;
     int year3;
     int month3;
@@ -44,8 +46,8 @@ public class BookNowActivity extends AppCompatActivity {
         setContentView( R.layout.activitybooking );
 
         etclient = findViewById( R.id.clientName );
-        etvehicleNumber = findViewById( R.id.vehicleNumber );
-        ettime = findViewById( R.id.dateTime );
+        etvehicleNumber = findViewById( R.id.VehicleNumber );
+        ettime = findViewById( R.id.DateTime );
         BtnBookNow = findViewById( R.id.btnBookNow );
 
         ServicingType_spinner = findViewById( R.id.ServicingType_spinner );
@@ -131,7 +133,7 @@ public class BookNowActivity extends AppCompatActivity {
 
         BookingModel bookingModel = new BookingModel(client,vehicleNumber,date,ServicingType,VehicleName,price);
         UserApi usersAPI = Url.getInstance().create(UserApi.class);
-        Call<BookingResponse> bookingCall = usersAPI.bookingDetail(bookingModel);
+        Call<BookingResponse> bookingCall = usersAPI.bookingDetail(Url.token, bookingModel);
 
         bookingCall.enqueue(new Callback<BookingResponse>() {
             @Override

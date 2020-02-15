@@ -100,7 +100,7 @@ public class UserDetailsActivity extends Activity {
         String userName = etUName.getText().toString();
         String address = etUAddress.getText().toString();
         String phone = etUPnumber.getText().toString();
-        Call<UserResponse> updatecall = userAPI.userUpate(Url.token, id, fullName,email,userName, address, phone);
+        Call<UserResponse> updatecall = userAPI.userUpate(Url.token, fullName,email,userName, address, phone);
 
         updatecall.enqueue(new Callback<UserResponse>() {
             @Override

@@ -11,7 +11,10 @@ import com.example.two_wheeler_schedule_management_system.ServerResponse.UserRes
 import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -31,15 +34,16 @@ public interface UserApi {
     Call<ImageResponse> uploadImage(@Part MultipartBody.Part Profileimage);
 
     @GET("users")
-    Call<UserModel> getUserDetails(String token);
+    Call<UserModel> getUserDetails(@Header( "Authorization" ) String token);
 
     @POST("complain")
-    Call<FeedbackResponse> feedbackDetail(Feedback feedback);
+    Call<FeedbackResponse> feedbackDetail(@Body Feedback feedback);
 
     @POST("booking")
-    Call<BookingResponse> bookingDetail(BookingModel bookingModel);
+    Call<BookingResponse> bookingDetail(@Header( "Authorization" ) String token ,@Body BookingModel bookingModel);
 
-    @PUT("users/userupdate")
-    Call<UserResponse> userUpate(String token, String id, String fullName, String email, String userName, String address, String phone);
+    @FormUrlEncoded
+    @PUT("users/me")
+    Call<UserResponse> userUpate(@Header("Authorization") String token, @Field( "fullname" ) String fullname, @Field( "email" ) String email, @Field( "username" )String username, @Field( "address" ) String address, @Field( "phonenumber" ) String phonenumber);
 }
 

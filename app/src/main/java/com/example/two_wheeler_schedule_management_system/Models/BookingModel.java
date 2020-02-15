@@ -3,7 +3,7 @@ package com.example.two_wheeler_schedule_management_system.Models;
 
 public class BookingModel {
 
-    public BookingModel(String name, String type, String client, String vehicleName, String servicingType, String vehicleNumber) {
+    public BookingModel(String client, String vehicleNumber, String time,  String servicingType, String vehicleName, String price  ) {
         this.client = client;
         this.vehicleName = vehicleName;
         this.servicingType = servicingType;
