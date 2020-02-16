@@ -33,7 +33,7 @@
 
 
         <activity android:name=".SignUpActivity"></activity>
-        <activity android:name=".MapsActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,6 +51,7 @@
         <activity android:name=".Show_Parts"/>
         <activity android:name=".activity.BookingDetail"/>
         <activity android:name=".MainFeedback"/>
+        <activity android:name=".MapsActivity"/>
 
     </application>
 

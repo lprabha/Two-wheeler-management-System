@@ -76,9 +76,18 @@ GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
             mMap.setMyLocationEnabled(true);
         }
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng( -34, 151 );
-        mMap.addMarker( new MarkerOptions().position( sydney ).title( "Marker in Sydney" ) );
-        mMap.moveCamera( CameraUpdateFactory.newLatLng( sydney ) );
+        LatLng Boudha = new LatLng( 27.719624, 85.365625 );
+        mMap.addMarker( new MarkerOptions().position( Boudha ).title( "Service center in Boudha" ) );
+        mMap.moveCamera( CameraUpdateFactory.newLatLng( Boudha ) );
+        LatLng Samakhushi = new LatLng( 27.739924, 85.317405 );
+        mMap.addMarker( new MarkerOptions().position( Samakhushi ).title( "Service center in Samakhushi" ) );
+        mMap.moveCamera( CameraUpdateFactory.newLatLng( Samakhushi ) );
+        LatLng Subidhanagar = new LatLng( 27.683090, 85.346302 );
+        mMap.addMarker( new MarkerOptions().position( Subidhanagar ).title( "Service center in Subidhanagar" ) );
+        mMap.moveCamera( CameraUpdateFactory.newLatLng( Subidhanagar ) );
+        LatLng Kalanki = new LatLng( 27.691149,85.281196 );
+        mMap.addMarker( new MarkerOptions().position( Kalanki ).title( "Service center in Kalanki" ) );
+        mMap.moveCamera( CameraUpdateFactory.newLatLng( Kalanki ) );
     }
 
 

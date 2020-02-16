@@ -53,7 +53,7 @@ public interface UserApi {
     Call<UserResponse> userUpate(@Header("Authorization") String token, @Field( "fullname" ) String fullname, @Field( "email" ) String email, @Field( "username" )String username, @Field( "address" ) String address, @Field( "phonenumber" ) String phonenumber);
 
     @GET("parts")
-    Call<List<PartsModel>> getAllParts();
+    Call<List<PartsModel>> getAllParts(@Header("Authorization") String token);
 
 
 }
