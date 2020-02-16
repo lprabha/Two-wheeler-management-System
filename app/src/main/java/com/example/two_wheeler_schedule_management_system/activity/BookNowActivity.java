@@ -37,7 +37,7 @@ public class BookNowActivity extends AppCompatActivity {
     int year3;
     int month3;
     int day3;
-    Spinner VehicleName_spinner, ServicingType_spinner, price_spinner;
+    Spinner ServicingType_spinner, price_spinner;
     Button BtnBookNow;
 
     @Override
@@ -135,7 +135,7 @@ public class BookNowActivity extends AppCompatActivity {
                     return;
                 }
                 Toast.makeText(BookNowActivity.this, "Booked sucessfully", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(BookNowActivity.this, MainActivity.class);
+                Intent intent = new Intent(BookNowActivity.this, BookingDetail.class);
                 startActivity(intent);
                 finish();
 

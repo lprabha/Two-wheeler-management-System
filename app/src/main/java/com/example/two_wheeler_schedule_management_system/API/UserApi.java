@@ -1,12 +1,15 @@
 package com.example.two_wheeler_schedule_management_system.API;
 
 import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.Models.PartsModel;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.BookingResponse;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.FeedbackResponse;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.ImageResponse;
 import com.example.two_wheeler_schedule_management_system.Models.Feedback;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.UserResponse;
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -37,13 +40,21 @@ public interface UserApi {
     Call<UserModel> getUserDetails(@Header( "Authorization" ) String token);
 
     @POST("complain")
-    Call<FeedbackResponse> feedbackDetail(@Body Feedback feedback);
+    Call<FeedbackResponse> feedbackDetail(@Header( "Authorization" ) String token);
 
     @POST("booking")
     Call<BookingResponse> bookingDetail(@Header( "Authorization" ) String token ,@Body BookingModel bookingModel);
 
+    @GET("booking")
+     Call<BookingResponse> getBook(@Header("Authorization") String token);
+
     @FormUrlEncoded
     @PUT("users/me")
     Call<UserResponse> userUpate(@Header("Authorization") String token, @Field( "fullname" ) String fullname, @Field( "email" ) String email, @Field( "username" )String username, @Field( "address" ) String address, @Field( "phonenumber" ) String phonenumber);
+
+    @GET("parts")
+    Call<List<PartsModel>> getAllParts();
+
+
 }
 

@@ -160,7 +160,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardSubscription"
+                android:id="@+id/cardServicingCenter"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="15dp"
@@ -187,7 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Subscription"/>
+                        android:text="Parts"/>
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

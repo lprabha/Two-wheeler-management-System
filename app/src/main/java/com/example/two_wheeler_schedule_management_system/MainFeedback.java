@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.Models.Feedback;
 import com.example.two_wheeler_schedule_management_system.Models.UserModel;
+import com.example.two_wheeler_schedule_management_system.fragments.HomeFragment;
 import com.example.two_wheeler_schedule_management_system.ServerResponse.FeedbackResponse;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
 
@@ -78,7 +79,7 @@ public class MainFeedback extends AppCompatActivity {
         Feedback feedback = new Feedback(client,topic,desc);
 
         UserApi usersAPI = Url.getInstance().create(UserApi.class);
-        Call<FeedbackResponse> feedbackCall = usersAPI.feedbackDetail( feedback );
+        Call<FeedbackResponse> feedbackCall = usersAPI.feedbackDetail( Url.token );
 
         feedbackCall.enqueue(new Callback<FeedbackResponse>() {
             @Override
@@ -88,7 +89,7 @@ public class MainFeedback extends AppCompatActivity {
                     return;
                 }
                 Toast.makeText(MainFeedback.this, "Feedback Posted", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(MainFeedback.this,MainFeedback.class);
+                Intent intent = new Intent(MainFeedback.this,HomeFragment.class);
                 startActivity(intent);
                 finish();
 

@@ -33,6 +33,7 @@
         <activity android:name=".activity.ActivityContact" />
         <activity android:name=".activity.UserDetailsActivity" />
         <activity android:name=".Show_Parts"/>
+        <activity android:name=".activity.BookingDetail"/>
         <activity android:name=".MainFeedback"/>
 
     </application>

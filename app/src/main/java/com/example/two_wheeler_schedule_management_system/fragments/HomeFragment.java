@@ -18,7 +18,7 @@ import com.example.two_wheeler_schedule_management_system.activity.BookNowActivi
 public class HomeFragment extends Fragment {
 
 
-    CardView servicing, booking, emergency, vparts, subscription, feedback;
+    CardView servicing, booking, emergency, vparts, serviceCenter, feedback;
 
     @Nullable
     @Override
@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
         booking = sview.findViewById( R.id.cardBooking );
         emergency = sview.findViewById( R.id.cardemergency );
         vparts = sview.findViewById( R.id.cardParts );
-        subscription = sview.findViewById( R.id.cardSubscription );
+        serviceCenter = sview.findViewById( R.id.cardServicingCenter );
         feedback = sview.findViewById( R.id.cardFeedback );
 
 
@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
 
                 getActivity().getSupportFragmentManager().beginTransaction().replace( R.id.fragmentContainer,
-                        new BookingFragment() ).commit();
+                        new EmergencyFragment() ).commit();
 
             }
         } );
@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
 
             }
         } );
-        subscription.setOnClickListener( new View.OnClickListener() {
+        serviceCenter.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

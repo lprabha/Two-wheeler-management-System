@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.BookingDetail">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="40dp">
+
+            <Spinner
+                android:id="@+id/spBooking"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="20dp"
+                />
+
+            <TextView
+                android:id="@+id/client"
+                android:hint="Client Name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorLightGrey"
+                android:padding="15dp"
+                android:textColor="@color/colorDark"
+                android:textColorHint="@color/colorDarkGrey"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/servicingType"
+                android:hint="Servicing Type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorLightGrey"
+                android:padding="15dp"
+                android:textColor="@color/colorDark"
+                android:textColorHint="@color/colorDarkGrey"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"
+                android:singleLine="true"/>
+            <TextView
+                android:id="@+id/servicingPrice"
+                android:hint="Price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorLightGrey"
+                android:padding="15dp"
+                android:textColor="@color/colorDark"
+                android:textColorHint="@color/colorDarkGrey"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Date"
+                android:background="@color/colorLightGrey"
+                android:padding="15dp"
+                android:textColor="@color/colorDark"
+                android:textColorHint="@color/colorDarkGrey"
+                android:layout_marginBottom="30dp"
+                android:textSize="16sp"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btnCancle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:text="Cancle"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

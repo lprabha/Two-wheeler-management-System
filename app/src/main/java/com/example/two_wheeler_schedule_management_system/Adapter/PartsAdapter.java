@@ -41,7 +41,6 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.PartsViewHol
     @Override
     public void onBindViewHolder(@NonNull PartsViewHolder partsViewHolder, int i) {
         final PartsModel partsModel = partsModels.get(i);
-//             Parts parts = partsList.get(i)
         partsViewHolder.PartsName.setText("Parts Name: "+partsModel.getPartName());
         partsViewHolder.Price.setText("Price: "+partsModel.getPartPrice());
         partsViewHolder.Model.setText("Model: "+partsModel.getPartModel());
@@ -51,6 +50,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.PartsViewHol
 
 
         Toast.makeText(context, ""+partsModel.getPartName(), Toast.LENGTH_SHORT).show();
+
 
 //        partsViewHolder.viewMore.setOnCLickListner(new View.OnClickListener(){
 //
@@ -87,7 +87,7 @@ public class PartsAdapter extends RecyclerView.Adapter<PartsAdapter.PartsViewHol
 
         public PartsViewHolder(@NonNull View itemView) {
             super(itemView);
-            ImgParts = itemView.findViewById(R.id.partsimage);
+            ImgParts = itemView.findViewById(R.id.imgparts);
             PartsName = itemView.findViewById(R.id.partsname);
             Price = itemView.findViewById(R.id.partsprice);
             Model = itemView.findViewById(R.id.partsmodel);
