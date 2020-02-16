@@ -1,21 +1,38 @@
 package com.example.two_wheeler_schedule_management_system.Models;
 
-import android.widget.Adapter;
-import android.widget.Spinner;
 
 public class BookingModel {
 
-    public BookingModel(String name, String type, String client, String vehicleName, String servicingType, String bookingName, String vehicleNumber, String price, String time) {
+    private String client;
+    private String servicingType;
+    private String servicingPrice;
+    private String time;
+    private String bookingNote;
+    private String _id;
+
+
+    public BookingModel(String client, String servicingType, String servicingPrice, String time) {
         this.client = client;
-        this.vehicleName = vehicleName;
         this.servicingType = servicingType;
-        this.bookingName = bookingName;
-        this.vehicleNumber = vehicleNumber;
-        this.price = price;
+        this.servicingPrice = servicingPrice;
         this.time = time;
     }
 
-    private String client;
+    public BookingModel(String client, String servicingType, String servicingPrice, String time, String _id) {
+        this.client = client;
+        this.servicingType = servicingType;
+        this.servicingPrice = servicingPrice;
+        this.time = time;
+        this._id = _id;
+    }
+
+    public String getBookingNote() {
+        return bookingNote;
+    }
+
+    public void setBookingNote(String bookingNote) {
+        this.bookingNote = bookingNote;
+    }
 
     public String getClient() {
         return client;
@@ -23,14 +40,6 @@ public class BookingModel {
 
     public void setClient(String client) {
         this.client = client;
-    }
-
-    public String getVehicleName() {
-        return vehicleName;
-    }
-
-    public void setVehicleName(String vehicleName) {
-        this.vehicleName = vehicleName;
     }
 
     public String getServicingType() {
@@ -41,28 +50,12 @@ public class BookingModel {
         this.servicingType = servicingType;
     }
 
-    public String getBookingName() {
-        return bookingName;
+    public String getServicingPrice() {
+        return servicingPrice;
     }
 
-    public void setBookingName(String bookingName) {
-        this.bookingName = bookingName;
-    }
-
-    public String getVehicleNumber() {
-        return vehicleNumber;
-    }
-
-    public void setVehicleNumber(String vehicleNumber) {
-        this.vehicleNumber = vehicleNumber;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
+    public void setServicingPrice(String servicingPrice) {
+        this.servicingPrice = servicingPrice;
     }
 
     public String getTime() {
@@ -73,11 +66,11 @@ public class BookingModel {
         this.time = time;
     }
 
-    private String vehicleName;
-    private String servicingType;
-    private String bookingName;
-    private String vehicleNumber;
-    private String price;
-    private String time;
+    public String get_id() {
+        return _id;
+    }
 
+    public void set_id(String _id) {
+        this._id = _id;
+    }
 }

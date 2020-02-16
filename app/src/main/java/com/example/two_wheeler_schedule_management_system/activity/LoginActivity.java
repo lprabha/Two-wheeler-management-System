@@ -2,6 +2,7 @@ package com.example.two_wheeler_schedule_management_system.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,7 +16,7 @@ import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.R;
 import com.example.two_wheeler_schedule_management_system.SignUpActivity;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
-import com.example.two_wheeler_schedule_management_system.UserResponse;
+import com.example.two_wheeler_schedule_management_system.ServerResponse.UserResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     Button loginbtn;
     EditText uname, upassword;
     TextView twsignup, twforgot;
+    Vibrator vibrator;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -38,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
         twforgot = findViewById( R.id.tvHelpSignIn );
         uname = findViewById( R.id.twUsername );
         loginbtn = findViewById( R.id.tw_btnLogin );
+
+    vibrator = (Vibrator) getSystemService( VIBRATOR_SERVICE );
 
 
         twsignup.setOnClickListener( new View.OnClickListener() {
@@ -81,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
                 Toast.makeText( LoginActivity.this, "Error:"+ t.getLocalizedMessage() , Toast.LENGTH_SHORT ).show();
+                vibrator.vibrate( 1000 );
             }
         } );
     }

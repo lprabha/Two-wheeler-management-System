@@ -1,146 +1,170 @@
 package com.example.two_wheeler_schedule_management_system.activity;
 
-import android.annotation.SuppressLint;
+
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.two_wheeler_schedule_management_system.API.BookNowApi;
+import com.example.two_wheeler_schedule_management_system.API.UserApi;
 import com.example.two_wheeler_schedule_management_system.MainActivity;
 import com.example.two_wheeler_schedule_management_system.Models.BookingModel;
+import com.example.two_wheeler_schedule_management_system.Models.UserModel;
 import com.example.two_wheeler_schedule_management_system.R;
+import com.example.two_wheeler_schedule_management_system.ServerResponse.BookingResponse;
 import com.example.two_wheeler_schedule_management_system.URL.Url;
+
+import java.util.Calendar;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class BookNowActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-     EditText etclient,etbookingName,etvehicleNumber,etprice,ettime;
-     Spinner VehicleName_spinner, ServicingType_spinner;
-     Button BtnBookNow;
+public class BookNowActivity extends AppCompatActivity {
+    TextView  ettime;
+    EditText etclient;
+    String id;
+    int year3;
+    int month3;
+    int day3;
+    Spinner ServicingType_spinner, price_spinner;
+    Button BtnBookNow;
 
-     @SuppressLint("WrongViewCast")
-     @Override
-     protected  void  onCreate( Bundle savedInstanceState) {
-         super.onCreate( savedInstanceState );
-         setContentView( R.layout.activitybooking );
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activitybooking );
 
-         etclient = findViewById( R.id.clientName );
-         etbookingName = findViewById( R.id.bookingName );
-         etvehicleNumber = findViewById( R.id.vehicleNumber );
-         etprice = findViewById( R.id.price );
-         ettime = findViewById( R.id.dateTime );
-         BtnBookNow= findViewById( R.id.btnBookNow );
+        etclient = findViewById( R.id.clientName );
+        ettime = findViewById( R.id.DateTime );
+        BtnBookNow = findViewById( R.id.btnBookNow );
 
-         ServicingType_spinner = findViewById(R.id.ServicingType_spinner);
-         VehicleName_spinner = findViewById(R.id.VehicleName_spinner);
-
-         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource( this,R.array.ServicingType_spinner,android.R.layout.simple_spinner_item );
-         adapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
-         ServicingType_spinner.setAdapter(adapter);
-         ServicingType_spinner.setOnItemSelectedListener(this);
-
-         ArrayAdapter<CharSequence> Vadapter = ArrayAdapter.createFromResource( this,R.array.VehicleName_spinner,android.R.layout.simple_spinner_item );
-         Vadapter.setDropDownViewResource( android.R.layout.simple_spinner_dropdown_item );
-         VehicleName_spinner.setAdapter(Vadapter);
-         VehicleName_spinner.setOnItemSelectedListener(this);
+        ServicingType_spinner = findViewById( R.id.ServicingType_spinner );
+        price_spinner = findViewById( R.id.price_spinner );
 
 
-
-
-         BtnBookNow.setOnClickListener( new View.OnClickListener() {
-             @Override
-             //Validation
-             public void onClick(View v) {
-                 if(etclient.getText().toString().matches("")){
-                     etclient.setError("Enter Client Name please");
-                     return;
-                 }
-                 if(etbookingName.getText().toString().matches("")){
-                     etbookingName.setError("Enter Phone Number please");
-                     return;
-                 }
-                 if(etvehicleNumber.getText().toString().matches("")){
-                     etvehicleNumber.setError("Enter Name please");
-                     return;
-                 }
-                 if(etprice.getText().toString().matches("")){
-                     etprice.setError("Enter Client Name please");
-                     return;
-                 }
-                 if(ettime.getText().toString().matches("")){
-                     ettime.setError("Enter Phone Number please");
-                     return;
-                 }
-                     Book();
-
-                 Intent IntentForm = new Intent( BookNowActivity.this, MainActivity.class );
-                 startActivity( IntentForm );
-
-             }
-         } );
-     }
-
-    private void Book() {
-
-         String client = etclient.getText().toString();
-         String bookingName = etbookingName.getText().toString();
-         String vehicleNumber = etvehicleNumber.getText().toString();
-         String price = etprice.getText().toString();
-         String date = ettime.getText().toString();
-         String ServicingType = ServicingType_spinner.getSelectedItem().toString();
-         String VehicleName = VehicleName_spinner.getSelectedItem().toString();
-
-
-
-         BookingModel book = new BookingModel(VehicleName,ServicingType,client,bookingName,vehicleNumber,price,date,"120","retet");
-
-         BookNowApi bookNowApi = Url.getInstance().create( BookNowApi.class );
-
-        Call<BookingModel> bookingModelCall = bookNowApi.booknow(book);
-
-
-        bookingModelCall.enqueue( new Callback<BookingModel>() {
+        BtnBookNow.setOnClickListener( new View.OnClickListener() {
             @Override
-            public void onResponse(Call<BookingModel> call, Response<BookingModel> response) {
-                if(!response.isSuccessful()){
-                    Toast.makeText( BookNowActivity.this,"Error",Toast.LENGTH_SHORT ).show();
-                    return;
-                }
-                Toast.makeText( BookNowActivity.this, "Book Successful.", Toast.LENGTH_SHORT ).show();
-            }
+            //Validation
+            public void onClick(View v) {
+                Booking();
 
-            @Override
-            public void onFailure(Call<BookingModel> call, Throwable t) {
-                Toast.makeText( BookNowActivity.this, "Error:"+ t.getLocalizedMessage() , Toast.LENGTH_SHORT ).show();
             }
         } );
+
+        String servicingType[] = {"Servicing Type", "Cleaning", "Full Servicing", "Maintinance", "On Call Home Service"};
+        ArrayAdapter adapter = new ArrayAdapter<>( this,android.R.layout.simple_expandable_list_item_1, servicingType);
+        ServicingType_spinner.setAdapter( adapter );
+
+        String price[] = {"Price of servicing","500", "200", "300", "100"};
+        ArrayAdapter padapter = new ArrayAdapter<>( this,android.R.layout.simple_expandable_list_item_1, price);
+        price_spinner.setAdapter( padapter );
+
+        ettime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadDatePickerDate();
+            }
+        });
+
+
+        etclient = findViewById(R.id.clientName);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            String clientName = bundle.getString("id");
+            etclient.setText(clientName);
+            Toast.makeText(this, clientName, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "no message received", Toast.LENGTH_SHORT).show();
+        }
+
+        UserApi usersAPI = Url.getInstance().create(UserApi.class);
+        Call<UserModel> userModelCall = usersAPI.getUserDetails(Url.token);
+
+        userModelCall.enqueue(new Callback<UserModel>() {
+            @Override
+            public void onResponse(Call<UserModel> call, Response<UserModel> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText(BookNowActivity.this, "Error" + response.code(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                etclient.setText(response.body().getFullname());
+
+
+                id = response.body().get_id();
+
+
+            }
+
+            @Override
+            public void onFailure(Call<UserModel> call, Throwable t) {
+
+                Log.d("Msg", "onFailure: " + t.getLocalizedMessage());
+                Toast.makeText(BookNowActivity.this, "Error" + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 
+    private void Booking() {
+        String client = etclient.getText().toString();
+        String date = ettime.getText().toString();
+        String ServicingType = ServicingType_spinner.getSelectedItem().toString();
+        String price = price_spinner.getSelectedItem().toString();
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(adapterView.getContext(),text,Toast.LENGTH_SHORT).show();
+        BookingModel bookingModel = new BookingModel(client,date,ServicingType,price);
+        UserApi usersAPI = Url.getInstance().create(UserApi.class);
+        Call<BookingResponse> bookingCall = usersAPI.bookingDetail(Url.token, bookingModel);
+
+        bookingCall.enqueue(new Callback<BookingResponse>() {
+            @Override
+            public void onResponse(Call<BookingResponse> call, Response<BookingResponse> response) {
+                if (!response.isSuccessful()) {
+                    Toast.makeText(BookNowActivity.this, "Code" + response.code(), Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                Toast.makeText(BookNowActivity.this, "Booked sucessfully", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(BookNowActivity.this, BookingDetail.class);
+                startActivity(intent);
+                finish();
+
+            }
+
+
+            @Override
+            public void onFailure(Call<BookingResponse> call, Throwable t) {
+
+                Toast.makeText(BookNowActivity.this, "Error " + t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+    private void loadDatePickerDate() {
+        final Calendar c1=Calendar.getInstance();
+        int year= c1.get(Calendar.YEAR);
+        final int month = c1.get(Calendar.MONTH);
+        int day= c1.get(Calendar.DAY_OF_MONTH);
 
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-        etclient =findViewById( R.id.clientName );
-        etbookingName =findViewById( R.id.BookingName );
-        ServicingType_spinner =findViewById( R.id. ServicingType_spinner);
-        VehicleName_spinner =findViewById( R.id.VehicleName_spinner );
-        etvehicleNumber  =findViewById( R.id.VehicleNumber );
-        etprice =findViewById( R.id.price );
-        ettime =findViewById( R.id.DateTime );
-        BtnBookNow =findViewById( R.id.btnBookNow );
+        DatePickerDialog datePickerDialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year1, int month, int dayOfMonth1) {
+                String date =  + (month + 1) + "/" + dayOfMonth1 + "/" + year1;
+                month3=month;
+                day3=dayOfMonth1;
+                year3=year1;
+                ettime.setText(date);
+            }
+        },year,month,day);
+        datePickerDialog.show();
     }
 }

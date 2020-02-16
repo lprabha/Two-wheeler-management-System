@@ -1,25 +1,8 @@
 <resources>
-    <string name="app_name">Two-wheeler-schedule-management-System</string>
+    <string name="app_name">Two Wheeler</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Home</string>
     <string name="title_notification">Notification</string>
     <string name="title_setting">Setting</string>
     <string name="title_booking">Booking</string>
-    <string-array name="VehicleName_spinner">
-        <item>Aprila</item>
-        <item>Dio</item>
-        <item>Pleasure</item>
-        <item>Pulser</item>
-        <item>Honda</item>
-        <item>Hero</item>
-        <item>Vespa</item>
-        <item>Yamaha</item>
-    </string-array>
-    <string-array name="ServicingType_spinner">
-        <item>Cleaning</item>
-        <item>Full Servicing</item>
-        <item>Maintinance</item>
-        <item>On Call Home Service</item>
-    </string-array>
-
 </resources>
