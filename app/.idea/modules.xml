@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Two-wheeler-schedule-management-System.iml" filepath="$PROJECT_DIR$/../Two-wheeler-schedule-management-System.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Two-wheeler-schedule-management-System.iml" filepath="$PROJECT_DIR$/../Two-wheeler-schedule-management-System.iml" group="Two-wheeler-schedule-management-System" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="Two-wheeler-schedule-management-System/app" />
     </modules>
   </component>
 </project>
